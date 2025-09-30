@@ -22,9 +22,9 @@ export const PaisCard = ({pais}) => {
         <button
         className="card-button quitar"
         onClick={(e) => {
-          e.stopPropagation();
           quitarPais(pais.cca3)
         }}
+        onDoubleClick={(e) => e.stopPropagation()}
         >
           Quitar de favoritos
         </button>
@@ -32,9 +32,9 @@ export const PaisCard = ({pais}) => {
         <button
         className="card-button"
         onClick={(e) => {
-          e.stopPropagation();
           agregarPais(pais)
         }}
+        onDoubleClick={(e) => e.stopPropagation()}  
         >
           Agregar a favoritos
         </button>
