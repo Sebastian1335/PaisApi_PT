@@ -1,0 +1,63 @@
+.pais-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 500px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  /* border-radius: 12px; */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); */
+
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pais-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.pais-card img {
+  width: 90px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.pais-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.pais-card-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.card-button {
+  border-radius: 6px;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+.quitar {
+  background-color: #e63946;
+}
+
+.quitar:hover {
+  background-color: #c1121f;
+}
