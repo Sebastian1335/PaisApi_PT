@@ -10,7 +10,7 @@ export const PaisCard = ({pais}) => {
   }
   return (
     <>
-    <div className="pais-card" onDoubleClick={onClick}>
+    <div className="pais-card" onDoubleClick={onClick} title="Doble click para mas infomación">
       <div className="pais-card-info">
         <p><strong>Nombre:</strong> {pais.name.common} </p>
         <p><strong>Región:</strong> {pais.region} </p>
