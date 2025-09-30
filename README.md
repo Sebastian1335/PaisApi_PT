@@ -23,6 +23,7 @@ bun dev
 Correr en modo normal
 
 ```bash
+npm run build
 npm start
 ```
 
