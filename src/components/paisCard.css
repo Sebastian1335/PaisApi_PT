@@ -24,6 +24,9 @@
   height: auto;
   border-radius: 6px;
   object-fit: cover;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .pais-card-info {

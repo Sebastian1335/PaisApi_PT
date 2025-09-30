@@ -35,6 +35,13 @@
   color: #007bff;
 }
 
+.modal-content img {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to   { opacity: 1; transform: translateY(0); }
