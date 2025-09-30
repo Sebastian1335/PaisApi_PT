@@ -27,5 +27,8 @@ npm run build
 npm start
 ```
 
+o ver la pagina desplegada
+
+https://pais-api-pt.vercel.app/
 
 # Opcional que se relizó: Persistir filtros en la URL
