@@ -2,7 +2,14 @@
 
 Tener instalado Node. El ultimo LTS o ultima versión
 
-# Instalar dependencias
+## Instalar dependencias
+
+```bash
+npm i
+```
+
+Correr en modo de desarrollo
+
 ```bash
 npm run dev
 # or
@@ -13,4 +20,11 @@ pnpm dev
 bun dev
 ```
 
-Opcional que se relizó: Persistir filtros en la URL
+Correr en modo normal
+
+```bash
+npm start
+```
+
+
+# Opcional que se relizó: Persistir filtros en la URL
