@@ -1,3 +1,6 @@
+# Requisitos
+
+Tener instalado Node. El ultimo LTS o ultima versión
 
 # Instalar dependencias
 ```bash

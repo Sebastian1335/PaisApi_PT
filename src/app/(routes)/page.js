@@ -18,7 +18,7 @@ export default function Home() {
 
   const searchParams = useSearchParams();
   const router = useRouter();
-  const { form, setForm, onInputChange } = useInput({
+  const { form, setForm, onInputChange, refreshForm } = useInput({
     nombre: "",
     region: "todos",
     minPoblacion: "",
@@ -92,6 +92,7 @@ export default function Home() {
           value={form.maxPoblacion}
           onChange={onInputChange}
         />
+        <button onClick={refreshForm}>Refrescar Filtros</button>
       </section>
 
       {/* Grid de países */}

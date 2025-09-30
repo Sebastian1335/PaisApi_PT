@@ -11,9 +11,14 @@ export const useInput = (initialState) => {
         });
     }
 
+    const refreshForm = () => {
+        setForm(initialState)
+    }
+
     return {
         form,
         setForm,
-        onInputChange
+        onInputChange,
+        refreshForm
     }
 }
