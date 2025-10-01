@@ -65,17 +65,3 @@
   background-color: #c1121f;
 }
 
-.pais-card::after {
-  content: "Doble clic para más info";
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  font-size: 0.75rem;
-  color: #555;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.pais-card:hover::after {
-  opacity: 1;
-}

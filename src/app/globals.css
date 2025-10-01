@@ -1,4 +1,6 @@
+/* ==================== */
 /* Contenedor de la página */
+/* ==================== */
 .page {
   min-height: 100vh;
   display: flex;
@@ -8,18 +10,22 @@
   font-family: Arial, sans-serif;
 }
 
+/* ==================== */
 /* Header */
+/* ==================== */
 .page-header {
   display: flex;
+  flex-wrap: wrap; /* se apilan solos si no entra */
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
   border-bottom: 2px solid #eee;
 }
 
 .page-header h1 {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 4vw, 1.8rem); /* escala con pantalla */
   margin: 0;
   color: #222;
 }
@@ -40,9 +46,9 @@
 /* ==================== */
 .filters {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* que se acomoden solos */
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
@@ -56,21 +62,19 @@
   margin-right: auto;
 }
 
-/* Inputs y selects */
 .filters input,
-.filters .select-custom {
-  flex: 1 1 200px;
-  max-width: 250px;
+.filters .select-custom,
+.filters button {
+  flex: 1 1 200px;    /* mínimo 200px, se expanden hasta llenar */
+  max-width: 300px;   /* no crecen infinito */
   height: 42px;
 
   padding: 0 12px;
   font-size: 0.95rem;
-  font-style: italic;
 
   border: 2px solid #333;
   border-radius: 8px;
   outline: none;
-
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -80,18 +84,11 @@
   box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
 }
 
-/* Botón de filtros */
 .filters button {
-  flex: 0 0 auto;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.95rem;
   font-weight: 600;
-
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 8px;
-
   cursor: pointer;
   transition: background-color 0.25s ease, transform 0.1s ease;
 }
@@ -108,37 +105,13 @@
 /* Select personalizado */
 /* ==================== */
 .select-custom {
-  width: 100%;
-  max-width: 300px;
-  height: 40px;
-
-  padding: 0 12px;
-  padding-right: 40px;
-  font-size: 1rem;
-  font-style: italic;
-  line-height: 1;
-
-  border: 2px solid #333;
-  border-radius: 8px;
-  background-color: #fff;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-
-  cursor: pointer;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
-
-  /* Flecha personalizada */
+  background-color: #fff;
+  padding-right: 40px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='%23333' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 12px 12px;
-}
-
-.select-custom option {
-  font-style: normal;
-  font-size: 0.95rem;
 }
 
 /* ==================== */
@@ -151,38 +124,4 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-/* ==================== */
-/* Responsive */
-/* ==================== */
-@media (max-width: 768px) {
-  .page-header {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-
-  .filters {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.8rem;
-  }
-
-  .filters input,
-  .filters .select-custom,
-  .filters button {
-    width: 100%;
-    max-width: none;
-  }
-
-  .pais-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .pais-card img {
-    width: 100%;
-    max-width: 200px;
-  }
 }
