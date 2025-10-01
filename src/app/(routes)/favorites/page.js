@@ -11,23 +11,24 @@ export default function Favorites() {
     const {paisFav, paisSel, quitarPaisSeleccionado} = useFavorites();
 
     return (
-        <>
+        <div className="page">
             <div className="page-header">
                 <h1>Paises favoritos</h1>
                 <Link className="page-link" href={`/?${searchParams.toString()}`} >
                     Volver
                 </Link>
             </div>
-
-            {paisFav.length === 0 ? (
-                <p>No tienes paises favoritos</p>
-            ) : (
-                paisFav.map((p) => (
-                    <PaisCard pais={p} key={p.name.official}/>
-                ))
-            )}
+            <main className="pais-grid">
+                {paisFav.length === 0 ? (
+                    <p>No tienes paises favoritos</p>
+                ) : (
+                    paisFav.map((p) => (
+                        <PaisCard pais={p} key={p.name.official}/>
+                    ))
+                )}
+            </main>
 
             <PaisModal pais={paisSel} onClose={quitarPaisSeleccionado}/>
-        </>
+        </div>
     );
 }

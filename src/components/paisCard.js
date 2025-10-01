@@ -10,7 +10,7 @@ export const PaisCard = ({pais}) => {
   }
   return (
     <>
-    <div className="pais-card" onDoubleClick={onClick} title="Doble click para mas infomación">
+    <div className="pais-card" onClick={onClick} title="Doble click para mas infomación">
       <div className="pais-card-info">
         <p><strong>Nombre:</strong> {pais.name.common} </p>
         <p><strong>Región:</strong> {pais.region} </p>
@@ -23,8 +23,8 @@ export const PaisCard = ({pais}) => {
         className="card-button quitar"
         onClick={(e) => {
           quitarPais(pais.cca3)
+          e.stopPropagation()
         }}
-        onDoubleClick={(e) => e.stopPropagation()}
         >
           Quitar de favoritos
         </button>
@@ -33,8 +33,8 @@ export const PaisCard = ({pais}) => {
         className="card-button"
         onClick={(e) => {
           agregarPais(pais)
+          e.stopPropagation()
         }}
-        onDoubleClick={(e) => e.stopPropagation()}  
         >
           Agregar a favoritos
         </button>

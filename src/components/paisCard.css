@@ -3,9 +3,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem;
-  margin: 1rem auto;
-  max-width: 500px;
+  padding: 1rem 10px;
+  margin: 1rem -25px -30px -1px;
+  max-width: 700px;
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   /* border-radius: 12px; */
@@ -66,7 +66,7 @@
 }
 
 .pais-card::after {
-  content: "Doble clic para más info";
+  content: "Clic para más info";
   position: absolute;
   bottom: 8px;
   right: 8px;
@@ -79,9 +79,7 @@
 .pais-card:hover::after {
   opacity: 1;
 }
-.pais-card {
-  position: relative;
-}
+
 
 .pais-card::after {
   pointer-events: none;
