@@ -35,15 +35,115 @@
   color: #0056b3;
 }
 
+/* ==================== */
 /* Filtros */
+/* ==================== */
 .filters {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-end;
   gap: 1rem;
   margin-bottom: 2rem;
+  padding: 1rem;
+
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Inputs y selects */
+.filters input,
+.filters .select-custom {
+  flex: 1 1 200px;
+  max-width: 250px;
+  height: 42px;
+
+  padding: 0 12px;
+  font-size: 0.95rem;
+  font-style: italic;
+
+  border: 2px solid #333;
+  border-radius: 8px;
+  outline: none;
+
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.filters input:focus,
+.filters .select-custom:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+/* Botón de filtros */
+.filters button {
+  flex: 0 0 auto;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.filters button:hover {
+  background-color: #0056b3;
+}
+
+.filters button:active {
+  transform: scale(0.97);
+}
+
+/* ==================== */
+/* Select personalizado */
+/* ==================== */
+.select-custom {
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+
+  padding: 0 12px;
+  padding-right: 40px;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1;
+
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #fff;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+  /* Flecha personalizada */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='%23333' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px 12px;
+}
+
+.select-custom option {
+  font-style: normal;
+  font-size: 0.95rem;
+}
+
+/* ==================== */
+/* Grid de países */
+/* ==================== */
 .pais-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -53,8 +153,10 @@
   margin: 0 auto;
 }
 
-/* Ajustes responsive */
-@media (max-width: 600px) {
+/* ==================== */
+/* Responsive */
+/* ==================== */
+@media (max-width: 768px) {
   .page-header {
     flex-direction: column;
     gap: 0.5rem;
@@ -63,7 +165,15 @@
 
   .filters {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .filters input,
+  .filters .select-custom,
+  .filters button {
+    width: 100%;
+    max-width: none;
   }
 
   .pais-card {
