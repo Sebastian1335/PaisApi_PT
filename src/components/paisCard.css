@@ -80,9 +80,9 @@
   opacity: 1;
 }
 .pais-card {
-  position: relative; /* importante para que ::after se quede dentro */
+  position: relative;
 }
 
 .pais-card::after {
-  pointer-events: none; /* evita que bloquee los clics */
+  pointer-events: none;
 }
